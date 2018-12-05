@@ -1,0 +1,8 @@
+FROM scratch
+
+COPY main \
+     config-run.json \
+     /root/
+EXPOSE 80
+
+ENTRYPOINT [ "/root/main","-conf=/root/config-run.json" ]
